@@ -22,7 +22,7 @@ const VerifyEmail = () => {
     }
 
     try {
-      await axiosInstance.get(`${apiUrl}/verify?token=${token}`); // Use axiosInstance
+      await axios.get(`${apiUrl}/verify?token=${token}`); // Use axiosInstance
       alert("Email verified successfully. You can now log in.");
       navigate("/");
     } catch (error) {
