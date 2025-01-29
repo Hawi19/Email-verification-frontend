@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosInstance = axios.create({
-  baseURL: "https://email-verification-frontend.onrender.com",
+  baseURL: "https://email-verification-backend-7vbo.onrender.com",
 });
 
 axiosInstance.interceptors.request.use(
