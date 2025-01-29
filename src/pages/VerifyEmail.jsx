@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "../api/server";
 
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
@@ -21,7 +22,7 @@ const VerifyEmail = () => {
     }
 
     try {
-      await axiosInstance.get(`/verify?token=${token}`); // Use axiosInstance
+      await axiosInstance.get(`${apiUrl}/verify?token=${token}`); // Use axiosInstance
       alert("Email verified successfully. You can now log in.");
       navigate("/");
     } catch (error) {
